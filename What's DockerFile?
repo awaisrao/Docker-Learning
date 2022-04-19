@@ -1,0 +1,15 @@
+Dockerfile contains a set of instructions that instructs docker which package should be installed. We can also use an existing image as a baseline for our new image.
+For instance,
+  FROM node:7
+  RUN mkdir -p /usr/src/app
+  WORKDIR /usr/src/app
+  COPY package.json /usr/src/app/
+  RUN npm install
+  COPY . /usr/src/app
+  CMD [ "npm", "start" ]
+
+This Dockerfile takes node:7 image as baseline image and further builds on it by running the commands listed below it. 
+RUN normally executes the command like we do on a CLI.
+WORKDIR sets the directory as working directory.
+COPY copies the the files from source to destination.
+CMD tells which command to run when the container starts.
