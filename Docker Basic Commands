@@ -1,0 +1,25 @@
+Docker is a containerization platform. Developers can package their applications along with their dependencies in containers. This enables the application to run on any supported OS instance wihtout worrying about the dependent libraries and packages.
+
+1. RUN Command
+Docker run command creates and runs a container from a docker image. It supports different flags like:
+ -d to run the container in dettached mode
+ -p to map ports of containers to ports of host machine
+ --name to name the newly created container
+ -v to mount a volume of host machine to volume of container 
+ -it to run container in interactive mode and access shell of that container
+ 
+ Command: 
+
+2. PS Command
+Docker ps command lists all the running containers
+ -a flag lists all the running and created containers
+
+Command: docker ps -a
+
+3. BUILD Command
+Docker build command builds an image from a dockerfile. Dockerfile contains a set of instructions that instructs docker which package should be installed.
+ -t flag lets you name the container along with its tag
+ 
+ Command: docker build -t redis-server:v1 .
+ 
+ 
