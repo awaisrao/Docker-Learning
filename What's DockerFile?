@@ -13,3 +13,5 @@ RUN normally executes the command like we do on a CLI.
 WORKDIR sets the directory as working directory.
 COPY copies the the files from source to destination.
 CMD tells which command to run when the container starts.
+ENTRYPOINT is also a very useful command in Dockerfile it act as a default command and then in CMD we can provide parameters/arguments to run as default. 
+This is useful when we want to override the default input as we can give argument while executing the run command of docker.
